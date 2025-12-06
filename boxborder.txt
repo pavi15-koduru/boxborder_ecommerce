@@ -1,0 +1,21 @@
+// The correct way to achieve a box with text and a border
+Container(
+  padding: const EdgeInsets.all(12),
+  // 1. Define the Box Style
+  decoration: BoxDecoration(
+    color: Colors.white, // Background color of the box
+    border: Border.all( // Define the border line
+      color: Colors.blue,
+      width: 2,
+    ),
+    borderRadius: BorderRadius.circular(8), // Optional: rounded corners
+  ),
+  // 2. Define the Text inside the Box
+  child: const Text(
+    'This text is inside a styled box!',
+    style: TextStyle(
+      color: Colors.black,
+      fontSize: 16,
+    ),
+  ),
+)

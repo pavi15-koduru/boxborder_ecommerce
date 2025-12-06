@@ -1,0 +1,61 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const BoxApp());
+}
+
+class BoxApp extends StatelessWidget {
+  const BoxApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: Q3BoxWithTextScreen(),
+    );
+  }
+}
+
+class Q3BoxWithTextScreen extends StatelessWidget {
+  const Q3BoxWithTextScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Q3: Box with Text Solution'),
+      ),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          // The Container provides the structure and background
+          child: Container(
+            // Adds space between the border/background and the child Text
+            padding: const EdgeInsets.all(16.0),
+            // The decoration property applies the visual "box" styling
+            decoration: BoxDecoration(
+              // The main property to define the box's border
+              border: Border.all(
+                color: Colors.deepPurple, // Border color
+                width: 3.0, // Border thickness
+              ),
+              // Background color inside the border
+              color: Colors.deepPurple.withOpacity(0.1),
+              // Optional: rounded corners for the box
+              borderRadius: BorderRadius.circular(10.0), 
+            ),
+            // The Text widget is placed as the child inside the box
+            child: const Text(
+              'Test Case 1 is correct: This text is styled inside a Container using BoxDecoration.',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Colors.deepPurple,
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
