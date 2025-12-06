@@ -1,0 +1,1 @@
+To create a box with text in Flutter for e-commerce elements like product tags or badges, use Container with BoxDecoration as the primary approach, which supports borders, colors, shadows, and rounded corners around centered text. This handles all test cases effectively while being performant and customizable.
